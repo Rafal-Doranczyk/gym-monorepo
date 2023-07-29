@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { NextAuthProvider } from '@/providers';
+import { NextAuthProvider, ThemeProvider } from '@/providers';
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -9,10 +9,13 @@ export default function Layout({ children }: { children: ReactNode }) {
         <title>Gym Client App </title>
         <meta name="description" content="Gym app" />
       </head>
+<ThemeProvider>
+
 
       <body>
         <NextAuthProvider>{children}</NextAuthProvider>
       </body>
+      </ThemeProvider>
     </html>
   );
 }

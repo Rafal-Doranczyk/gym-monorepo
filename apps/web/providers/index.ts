@@ -1,2 +1,4 @@
-export { NextAuthProvider } from './session';
-export { authOptions } from './authOptions';
+export { NextAuthProvider } from './session/provider';
+export { authOptions } from './session/authOptions';
+
+export { ThemeProvider, ThemeContext } from './theme/provider';
