@@ -5,13 +5,15 @@ import { constants } from 'gym-shared';
 
 import { APP_ROUTES } from '@/consts';
 
-const URL = `${process.env.NEXT_PUBLIC_API_URL}${constants.API_ROUTES.AUTH}`;
+
+
+const URL = `${process.env.API_URL}${constants.API_ROUTES.AUTH}`;
 
 export const authOptions: AuthOptions = {
   pages: {
     signIn: APP_ROUTES.SIGNIN_PAGE_PATH,
   },
-  secret: process.env.NEXT_PUBLIC_SECRET,
+  secret: process.env.SESSION_SECRET,
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,

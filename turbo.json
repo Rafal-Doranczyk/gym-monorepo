@@ -1,12 +1,12 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
+  "globalDependencies": ["**/.env"],
   "pipeline": {
     "build": {
       "env": [
-        "NEXT_PUBLIC_APP_NAME",
-        "NEXT_PUBLIC_API_URL",
-        "NEXT_PUBLIC_SECRET",
+        "APP_NAME",
+        "API_URL",
+        "SESSION_SECRET",
         "GOOGLE_CLIENT_SECRET",
         "GOOGLE_CLIENT_ID"
       ],

@@ -1,3 +1,8 @@
 module.exports = {
-  reactStrictMode: true
+  reactStrictMode: true,
+  swcMinify: true,
+  experimental: {
+    appDir: true,
+    serverActions: true,
+  },
 };
