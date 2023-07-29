@@ -5,7 +5,7 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "postinstall": "husky install",
+    "postinstall": "husky install | chmod ug+x .husky/*",
     "lint-staged": "pnpm run lint && pnpm run format"
   },
   "devDependencies": {
