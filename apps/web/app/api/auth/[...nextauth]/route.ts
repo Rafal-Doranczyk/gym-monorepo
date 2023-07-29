@@ -5,8 +5,6 @@ import { constants } from 'gym-shared';
 
 import { APP_ROUTES } from '@/consts';
 
-
-
 const URL = `${process.env.API_URL}${constants.API_ROUTES.AUTH}`;
 
 export const authOptions: AuthOptions = {
