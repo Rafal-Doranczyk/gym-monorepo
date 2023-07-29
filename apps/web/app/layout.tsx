@@ -9,12 +9,10 @@ export default function Layout({ children }: { children: ReactNode }) {
         <title>Gym Client App </title>
         <meta name="description" content="Gym app" />
       </head>
-<ThemeProvider>
-
-
-      <body>
-        <NextAuthProvider>{children}</NextAuthProvider>
-      </body>
+      <ThemeProvider>
+        <body>
+          <NextAuthProvider>{children}</NextAuthProvider>
+        </body>
       </ThemeProvider>
     </html>
   );
