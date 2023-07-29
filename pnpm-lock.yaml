@@ -20,9 +20,6 @@ importers:
       prettier:
         specifier: ^2.5.1
         version: 2.8.8
-      prettier-config-custom:
-        specifier: workspace:*
-        version: link:packages/prettier-config-custom
       turbo:
         specifier: 1.10.10
         version: 1.10.10
@@ -51,9 +48,6 @@ importers:
       eslint-config-custom:
         specifier: workspace:*
         version: link:../../packages/eslint-config-custom
-      prettier-config-custom:
-        specifier: workspace:*
-        version: link:../../packages/prettier-config-custom
       tsconfig:
         specifier: workspace:*
         version: link:../../packages/tsconfig
@@ -75,8 +69,6 @@ importers:
       eslint-plugin-react:
         specifier: 7.28.0
         version: 7.28.0(eslint@7.32.0)
-
-  packages/prettier-config-custom: {}
 
   packages/tsconfig: {}
 
