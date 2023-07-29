@@ -1,9 +1,5 @@
-'use client';
+import { AuthForm } from '@/modules';
 
 export default function Page() {
-  return (
-    <>
-      <h1>page</h1>
-    </>
-  );
+  return <AuthForm />;
 }
