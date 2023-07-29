@@ -1,6 +1,5 @@
 export type ErrorPageProps = {
-    error: {
-      message?: string;
-    };
+  error: {
+    message?: string;
   };
-  
+};
