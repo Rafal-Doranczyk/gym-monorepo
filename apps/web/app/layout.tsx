@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { NextAuthProvider, ThemeProvider } from '@/providers';
+import { NextAuthProvider, ThemeProvider, ToastProvider } from '@/context';
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -10,8 +10,10 @@ export default function Layout({ children }: { children: ReactNode }) {
         <meta name="description" content="Gym app" />
       </head>
       <ThemeProvider>
-        <body>
-          <NextAuthProvider>{children}</NextAuthProvider>
+        <body suppressHydrationWarning>
+          <ToastProvider>
+            <NextAuthProvider>{children}</NextAuthProvider>
+          </ToastProvider>
         </body>
       </ThemeProvider>
     </html>
