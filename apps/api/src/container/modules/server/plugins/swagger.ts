@@ -1,10 +1,12 @@
 import { FastifyInstance } from 'fastify';
 import fastifySwagger from '@fastify/swagger';
 import fastifySwaggerUi from '@fastify/swagger-ui';
+import { jsonSchemaTransform } from 'fastify-type-provider-zod';
 
 /** @param {import('fastify').FastifyInstance} app */
 export default function swaggerPlugin(app: FastifyInstance) {
   app.register(fastifySwagger, {
+    transform: jsonSchemaTransform,
     swagger: {
       info: {
         title: 'Test swagger',
@@ -20,13 +22,6 @@ export default function swaggerPlugin(app: FastifyInstance) {
         { name: 'auth', description: 'Auth related end-points' },
         { name: 'user', description: 'User related end-points' },
       ],
-      securityDefinitions: {
-        apiKey: {
-          type: 'apiKey',
-          name: 'apiKey',
-          in: 'header',
-        },
-      },
     },
   });
 

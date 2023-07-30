@@ -3,17 +3,17 @@
 import { ReactNode, createContext, useMemo, useState } from 'react';
 import { ThemeProvider as MaterialProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { enums } from 'gym-shared';
+import { PALETTE_MODES } from 'gym-shared';
 
 import { THEME_COLORS } from './colors';
 
 export const ThemeContext = createContext({
-  mode: enums.PALETTE_MODES.DARK,
-  setMode: (_: enums.PALETTE_MODES) => {},
+  mode: PALETTE_MODES.DARK,
+  setMode: (_: PALETTE_MODES) => {},
 });
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [mode, setMode] = useState<enums.PALETTE_MODES>(enums.PALETTE_MODES.DARK);
+  const [mode, setMode] = useState<PALETTE_MODES>(PALETTE_MODES.DARK);
 
   const theme = useMemo(
     () =>

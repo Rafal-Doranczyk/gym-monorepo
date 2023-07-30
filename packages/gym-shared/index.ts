@@ -1,2 +1,3 @@
-export * as enums from './enums';
+export * from './enums';
 export * from './constants';
+export * from './schemas';
