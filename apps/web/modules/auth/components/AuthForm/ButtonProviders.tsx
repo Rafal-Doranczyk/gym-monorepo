@@ -6,7 +6,9 @@ import { Google } from '@mui/icons-material';
 
 import { APP_ROUTES } from '@/consts';
 
-const providers = [{ icon: <Google />, name: 'google', text: 'Continue with Google' }] as const;
+const providers = [
+  { icon: <Google />, name: 'google', text: 'Continue with Google' },
+] as const;
 
 export default function ButtonProviders() {
   return (
@@ -19,7 +21,9 @@ export default function ButtonProviders() {
           size="large"
           variant="outlined"
           sx={{ width: 300 }}
-          onClick={() => signIn('google', { callbackUrl: APP_ROUTES.DASHBOARD_PAGE_PATH })}
+          onClick={() =>
+            signIn('google', { callbackUrl: APP_ROUTES.DASHBOARD_PAGE_PATH })
+          }
           startIcon={icon}
         >
           {text}

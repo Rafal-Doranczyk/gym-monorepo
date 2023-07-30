@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "tsc",
-    "dev": "npx tsx watch src | pino-pretty --colorize"
+    "dev": "npx tsx watch src | pino-pretty --colorize",
+    "lint": "tsc"
   },
   "dependencies": {
     "@fastify/cors": "^8.3.0",

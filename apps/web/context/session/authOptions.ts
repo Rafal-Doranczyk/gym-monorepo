@@ -34,7 +34,9 @@ export const authOptions: AuthOptions = {
 
           token.access_token = account.id_token;
           token.refresh_token = account.refresh_token;
-          token.expires_at = Math.floor(Date.now() / 1000 + (account.expires_in as number));
+          token.expires_at = Math.floor(
+            Date.now() / 1000 + (account.expires_in as number),
+          );
 
           return token;
         } catch (error) {

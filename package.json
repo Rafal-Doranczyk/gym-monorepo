@@ -5,8 +5,7 @@
     "dev": "dotenv -- turbo dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,mdm,json}\"",
-    "postinstall": "husky install | chmod ug+x .husky/*",
-    "lint-staged": "pnpm run lint && pnpm run format"
+    "postinstall": "husky install | chmod ug+x .husky/*"
   },
   "devDependencies": {
     "@turbo/gen": "^1.9.7",

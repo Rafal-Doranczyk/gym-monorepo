@@ -1,6 +1,10 @@
 import { Container } from 'inversify';
 
-import { ConfigModuleContainer, ServerContainerModule, DatabaseModuleContainer } from './modules';
+import {
+  ConfigModuleContainer,
+  ServerContainerModule,
+  DatabaseModuleContainer,
+} from './modules';
 
 const appContainer = new Container();
 
