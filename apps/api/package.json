@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "npx tsx watch src .env | pino-pretty --colorize"
+  },
+  "dependencies": {
+    "fastify": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.2",
+    "eslint-config-custom": "workspace:*",
+    "inversify": "^6.0.1",
+    "pino-pretty": "^10.0.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.9.1",
+    "tsconfig": "workspace:*",
+    "typescript": "^5.1.6"
+  }
+}

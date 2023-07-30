@@ -1,0 +1,12 @@
+{
+  "extends": "tsconfig/backend.json",
+  "compilerOptions": {
+    "plugins": [{ "name": "backend" }],
+    "outDir": "build",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
