@@ -1,23 +1,23 @@
-// ESM
-import Fastify from 'fastify';
+import 'reflect-metadata';
+import { FastifyInstance } from 'fastify';
 
-const fastify = Fastify({
-  logger: true,
-});
-
-fastify.get('/', async (request, reply) => {
-  return { hello: 'world' };
-});
+import container, { ConfigModuleInterface, ConfigSymbols } from './container';
 
 /**
  * Run the server!
  */
-const start = async () => {
+async function start() {
+  const { host, port } = container.get<ConfigModuleInterface>(ConfigSymbols.Config);
+  const server = await container.getAsync<FastifyInstance>(ConfigSymbols.Server);
+
   try {
-    await fastify.listen({ port: 8080 });
+    server.swagger();
+    server.listen({ port, host });
+    server.log.info(`Server listening on ${host}:${port}`);
   } catch (err) {
-    fastify.log.error(err);
+    server.log.error(err);
     process.exit(1);
   }
-};
+}
+
 start();

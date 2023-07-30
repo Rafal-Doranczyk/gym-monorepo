@@ -4,15 +4,22 @@
   "private": true,
   "scripts": {
     "build": "tsc",
-    "dev": "npx tsx watch src .env | pino-pretty --colorize"
+    "dev": "npx tsx watch src | pino-pretty --colorize"
   },
   "dependencies": {
-    "fastify": "^4.21.0"
+    "@fastify/cors": "^8.3.0",
+    "@fastify/helmet": "^11.0.0",
+    "@fastify/swagger": "^8.8.0",
+    "@fastify/swagger-ui": "^1.9.3",
+    "fastify": "^4.21.0",
+    "pg": "^8.11.1",
+    "typeorm": "^0.3.17"
   },
   "devDependencies": {
     "@types/node": "^20.4.2",
     "eslint-config-custom": "workspace:*",
     "inversify": "^6.0.1",
+    "pino": "^8.14.2",
     "pino-pretty": "^10.0.1",
     "reflect-metadata": "^0.1.13",
     "ts-node": "^10.9.1",

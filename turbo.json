@@ -3,13 +3,6 @@
   "globalDependencies": ["**/.env"],
   "pipeline": {
     "build": {
-      "env": [
-        "APP_NAME",
-        "API_URL",
-        "SESSION_SECRET",
-        "GOOGLE_CLIENT_SECRET",
-        "GOOGLE_CLIENT_ID"
-      ],
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },

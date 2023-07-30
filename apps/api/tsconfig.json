@@ -3,10 +3,11 @@
   "compilerOptions": {
     "plugins": [{ "name": "backend" }],
     "outDir": "build",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["src/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "../../env.d.ts"],
+  "include": ["src/**/*", "**/*.ts", "../../env.d.ts"],
   "exclude": ["node_modules"]
 }
