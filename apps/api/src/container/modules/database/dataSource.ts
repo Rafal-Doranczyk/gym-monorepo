@@ -10,7 +10,7 @@ export const dataSource = new DataSource({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   //   entities: [...Object.values(Entities)],
-  ssl: Boolean(process.env.SSL),
+  ssl: Boolean(process.env.DB_SSL),
   // dropSchema: true,
   // synchronize: true,
 });

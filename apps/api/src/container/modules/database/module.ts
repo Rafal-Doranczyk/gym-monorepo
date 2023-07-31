@@ -1,10 +1,10 @@
 import { AsyncContainerModule } from 'inversify';
 import pino from 'pino';
 
-import { dataSource } from './dataSource';
 import { ConfigSymbols } from '@/container/symbols';
+import { dataSource } from './dataSource';
 
-export default new AsyncContainerModule(async bind => {
+const databaseModule = new AsyncContainerModule(async bind => {
   bind(ConfigSymbols.Database).toConstantValue(dataSource);
 
   try {
@@ -18,3 +18,5 @@ export default new AsyncContainerModule(async bind => {
     throw error;
   }
 });
+
+export default databaseModule;

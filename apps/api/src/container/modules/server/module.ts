@@ -6,7 +6,7 @@ import ApplicationAPI from '@/api';
 import { ConfigSymbols } from '../../symbols';
 import * as Plugins from './plugins';
 
-export default new ContainerModule(bind => {
+const serverModule = new ContainerModule(bind => {
   let server = fastify({
     logger: true,
     ajv: {
@@ -33,3 +33,5 @@ export default new ContainerModule(bind => {
     server.decorateRequest('container', { getter: () => context.container }),
   );
 });
+
+export default serverModule;

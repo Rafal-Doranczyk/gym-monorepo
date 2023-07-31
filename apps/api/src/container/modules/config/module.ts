@@ -7,7 +7,7 @@ export type ConfigModuleInterface = {
   host: string;
 };
 
-export default new ContainerModule(bind => {
+const configModule = new ContainerModule(bind => {
   const value: ConfigModuleInterface = {
     port: +process.env.API_PORT,
     host: process.env.API_HOST,
@@ -15,3 +15,5 @@ export default new ContainerModule(bind => {
 
   bind(ConfigSymbols.Config).toConstantValue(value);
 });
+
+export default configModule;

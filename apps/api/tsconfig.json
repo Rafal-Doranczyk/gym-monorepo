@@ -2,7 +2,6 @@
   "extends": "tsconfig/backend.json",
   "compilerOptions": {
     "plugins": [{ "name": "backend" }],
-    "outDir": "build",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]

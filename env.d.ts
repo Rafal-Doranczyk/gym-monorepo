@@ -17,8 +17,6 @@ declare global {
       DB_PASSWORD: string;
       DB_NAME: string;
       DB_SSL: boolean;
-      GOOGLE_CLIENT_ID: string;
-      GOOGLE_CLIENT_SECRET: string;
 
       // SHARED
       NODE_ENV: 'development';

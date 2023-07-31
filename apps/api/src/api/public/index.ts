@@ -1,4 +1,6 @@
 import { healthRoutes } from './health';
 import { authRoutes } from './auth';
 
-export default [healthRoutes, authRoutes];
+const publicRoutes = [healthRoutes, authRoutes];
+
+export default publicRoutes;
