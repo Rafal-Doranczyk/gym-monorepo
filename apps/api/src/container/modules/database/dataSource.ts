@@ -1,6 +1,6 @@
 import { DataSource } from 'typeorm';
 
-export type DatabaseModuleInterface = DataSource;
+import * as Entities from '@/entities';
 
 export const dataSource = new DataSource({
   type: process.env.DB_TYPE,
@@ -9,8 +9,7 @@ export const dataSource = new DataSource({
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  //   entities: [...Object.values(Entities)],
-  ssl: Boolean(process.env.DB_SSL),
-  // dropSchema: true,
-  // synchronize: true,
+  entities: [...Object.values(Entities)],
+  dropSchema: true,
+  synchronize: true,
 });

@@ -1,3 +1,2 @@
 export { default as DatabaseModuleContainer } from './module';
-
-export { dataSource, type DatabaseModuleInterface } from './dataSource';
+export { dataSource } from './dataSource';
