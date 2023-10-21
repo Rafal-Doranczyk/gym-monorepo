@@ -2,7 +2,7 @@ import { TokenPayload } from 'google-auth-library';
 import {
   DEFAULT_PALETTE_MODE,
   DEFAULT_CURRENCY,
-  MEASUREMENTS_TYPES,
+  MEASUREMENTS,
   UpdateUserSettingsPayload,
 } from 'gym-shared';
 
@@ -13,7 +13,7 @@ function createInitialUserSettings(payload?: UpdateUserSettingsPayload) {
   const settings = new UserSettingsEntity();
   settings.palette = payload?.palette || DEFAULT_PALETTE_MODE;
   settings.currency = payload?.currency || DEFAULT_CURRENCY;
-  settings.activeMeasurementsKeys = Object.values(MEASUREMENTS_TYPES);
+  settings.activeMeasurementsKeys = Object.values(MEASUREMENTS);
 
   return settings;
 }

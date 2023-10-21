@@ -14,13 +14,13 @@ export enum CURRENCIES {
   USD = 'usd',
 }
 
-export enum INGREDIENT_COUNT_TYPES {
+export enum INGREDIENT_COUNTS {
   ONE_PIECE = 'one piece',
   ONE_HUNDRED_GRAMS = '100g',
   ONE_KILO = '1kg',
 }
 
-export enum MEASUREMENTS_TYPES {
+export enum MEASUREMENTS {
   WEIGHT = 'weight',
   CHEST = 'chest',
   HIP = 'hip',

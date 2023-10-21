@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { PALETTE_MODES, CURRENCIES, MEASUREMENTS_TYPES } from '../index';
+import { PALETTE_MODES, CURRENCIES, MEASUREMENTS } from '../index';
 
 export const UserSettingsSchema = z.object({
   palette: z.nativeEnum(PALETTE_MODES),
   currency: z.nativeEnum(CURRENCIES),
-  activeMeasurementsKeys: z.array(z.nativeEnum(MEASUREMENTS_TYPES)),
+  activeMeasurementsKeys: z.array(z.nativeEnum(MEASUREMENTS)),
 });
 
 export const UserSchema = z.object({

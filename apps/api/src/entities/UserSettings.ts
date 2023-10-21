@@ -4,7 +4,7 @@ import {
   DEFAULT_PALETTE_MODE,
   CURRENCIES,
   DEFAULT_CURRENCY,
-  MEASUREMENTS_TYPES,
+  MEASUREMENTS,
 } from 'gym-shared';
 
 import { UserEntity } from '@/entities';
@@ -30,11 +30,11 @@ export default class UserSettings {
 
   @Column({
     type: 'enum',
-    enum: MEASUREMENTS_TYPES,
-    default: [Object.values(MEASUREMENTS_TYPES)],
+    enum: MEASUREMENTS,
+    default: [Object.values(MEASUREMENTS)],
     array: true,
   })
-  activeMeasurementsKeys!: MEASUREMENTS_TYPES[];
+  activeMeasurementsKeys!: MEASUREMENTS[];
 
   @OneToOne(() => UserEntity)
   user!: UserEntity;

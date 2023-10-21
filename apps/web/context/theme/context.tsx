@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode, createContext, useMemo, useState } from 'react';
+import { PropsWithChildren, createContext, useMemo, useState } from 'react';
 import { ThemeProvider as MaterialProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { PALETTE_MODES } from 'gym-shared';
@@ -12,7 +12,7 @@ export const ThemeContext = createContext({
   setMode: (_: PALETTE_MODES) => {},
 });
 
-export function ThemeProvider({ children }: { children: ReactNode }) {
+export function ThemeProvider({ children }: PropsWithChildren) {
   const [mode, setMode] = useState<PALETTE_MODES>(PALETTE_MODES.DARK);
 
   const theme = useMemo(

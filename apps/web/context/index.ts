@@ -1,3 +1,4 @@
+export { UserContext } from './user';
 export { ThemeProvider, ThemeContext } from './theme/context';
 export { ToastProvider, ToastContext } from './toast/context';
 
